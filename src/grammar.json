@@ -1,0 +1,57 @@
+{
+  "name": "sexp",
+  "rules": {
+    "sexp": {
+      "type": "SYMBOL",
+      "name": "_sexp"
+    },
+    "_sexp": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "atom"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "list"
+        }
+      ]
+    },
+    "atom": {
+      "type": "PATTERN",
+      "value": "[_@a-zA-Z0-9\\xC0-\\xD6\\xD8-\\xDE\\xDF-\\xF6\\xF8-\\xFF:-]+"
+    },
+    "list": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_sexp"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "tree-parser-sexp",
+  "version": "0.0.0",
+  "description": "Tree Parser support for S-expressions",
+  "author": "Leandro Ostera <leandro@ostera.io>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "nan": "^2.14.1",
+    "prettier": "^2.2.1",
+    "tree-sitter-cli": "^0.17.1"
+  }
+}
