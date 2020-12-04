@@ -1,6 +1,6 @@
 TREE_SITTER=tree-sitter
 
-all: fmt gen test
+all: fmt gen test build
 
 fmt:
 	./node_modules/.bin/prettier --write grammar.js
@@ -8,6 +8,7 @@ fmt:
 .PHONY: test
 test: gen
 	$(TREE_SITTER) test
+	cargo test
 
 .PHONY: gen
 gen:
@@ -29,3 +30,6 @@ wasm:
 publish: all wasm
 	cp ./tree-sitter-sexp.wasm ./docs
 
+.PHONY: build
+build:
+	cargo build --release
