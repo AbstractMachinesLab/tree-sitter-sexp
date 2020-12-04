@@ -29,10 +29,13 @@ impl Sexp {
                 let text = root.utf8_text(&bytes)?.to_string();
                 Ok(Sexp::Atom(text))
             }
-            "list" | "ERROR" | "MISSING" => {
+            kind @ "list" | kind @ "ERROR" | kind @ "MISSING" => {
                 let mut walker = root.walk();
                 walker.goto_first_child();
-                let mut children = vec![];
+                let mut children = match kind {
+                    "list" => vec![],
+                    _ => vec![Sexp::Atom(kind.to_string())],
+                };
                 while walker.goto_next_sibling() {
                     let child = walker.node();
                     children.push(Sexp::build_tree(child, bytes)?);
@@ -146,6 +149,12 @@ impl fmt::Display for Sexp {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_error_sexpr() {
+        assert_eq!(Sexp::of_str(&"(sexp (").is_err(), true,);
+    }
+
     #[test]
     fn test_single_sexpr() {
         assert_eq!(
