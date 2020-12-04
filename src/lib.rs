@@ -29,7 +29,7 @@ impl Sexp {
                 let text = root.utf8_text(&bytes)?.to_string();
                 Ok(Sexp::Atom(text))
             }
-            "list" => {
+            "list" | "ERROR" | "MISSING" => {
                 let mut walker = root.walk();
                 walker.goto_first_child();
                 let mut children = vec![];

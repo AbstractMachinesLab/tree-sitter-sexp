@@ -1,4 +1,3 @@
-
 ================================================================================
 atom
 ================================================================================
@@ -8,7 +7,7 @@ hello
 --------------------------------------------------------------------------------
 
 (sexp
- (atom))
+  (atom))
 
 ================================================================================
 empty
@@ -19,7 +18,34 @@ empty
 --------------------------------------------------------------------------------
 
 (sexp
- (list))
+  (list))
+
+================================================================================
+ERROR
+================================================================================
+
+(ERROR )what)
+
+--------------------------------------------------------------------------------
+
+(sexp
+  (list
+    (atom))
+  (ERROR
+    (atom)))
+
+================================================================================
+MISSING
+================================================================================
+
+(MISSING
+
+--------------------------------------------------------------------------------
+
+(sexp
+  (list
+    (atom)
+    (MISSING ")))
 
 ================================================================================
 single line
@@ -30,8 +56,8 @@ single line
 --------------------------------------------------------------------------------
 
 (sexp
- (list
-  (atom)))
+  (list
+    (atom)))
 
 ================================================================================
 multiple parts
@@ -42,11 +68,11 @@ multiple parts
 --------------------------------------------------------------------------------
 
 (sexp
- (list
-  (atom)
-  (atom)
-  (atom)
-  (atom)))
+  (list
+    (atom)
+    (atom)
+    (atom)
+    (atom)))
 
 ================================================================================
 nested s-expressions
@@ -57,14 +83,14 @@ nested s-expressions
 --------------------------------------------------------------------------------
 
 (sexp
- (list
-  (atom)
   (list
-   (atom)
-   (list
-    (atom))
-   (list
-    (atom)))))
+    (atom)
+    (list
+      (atom)
+      (list
+        (atom))
+      (list
+        (atom)))))
 
 ================================================================================
 field-like atoms
@@ -75,12 +101,12 @@ field-like atoms
 --------------------------------------------------------------------------------
 
 (sexp
- (list
-  (atom)
-  (atom)
-  (atom)
   (list
-   (atom))))
+    (atom)
+    (atom)
+    (atom)
+    (list
+      (atom))))
 
 ================================================================================
 real-life example
@@ -92,867 +118,867 @@ real-life example
 --------------------------------------------------------------------------------
 
 (sexp
- (list
-  (atom)
   (list
-   (atom)
-   (list
     (atom)
     (list
-     (atom))))
-  (list
-   (atom)
-   (list
-    (atom)
-    (list
-     (atom)))
-   (list
-    (atom)))
-  (list
-   (atom)
-   (list
-    (atom)
-    (list
-     (atom)))
-   (list
-    (atom)))
-  (list
-   (atom)
-   (list
-    (atom)
-    (list
-     (atom)))
-   (list
-    (atom)))
-  (list
-   (atom)
-   (list
-    (atom)
-    (list
-     (atom)
-     (list
-      (atom)))
-    (list
-     (atom)
-     (list
       (atom)
       (list
-       (atom)))
-     (list
-      (atom)
-      (list
-       (atom)))
-     (list
-      (atom)
-      (list
-       (atom)
-       (list
         (atom)
         (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)
-           (list
-            (atom)))))
-        (list
-         (atom)
-         (list
           (atom))))
-       (list
+    (list
+      (atom)
+      (list
         (atom)
         (list
-         (atom)
-         (list
+          (atom)))
+      (list
+        (atom)))
+    (list
+      (atom)
+      (list
+        (atom)
+        (list
+          (atom)))
+      (list
+        (atom)))
+    (list
+      (atom)
+      (list
+        (atom)
+        (list
+          (atom)))
+      (list
+        (atom)))
+    (list
+      (atom)
+      (list
+        (atom)
+        (list
           (atom)
           (list
-           (atom)
-           (list
             (atom)))
+        (list
+          (atom)
           (list
-           (atom)
-           (list
-            (atom)))
-          (list
-           (atom)
-           (list
             (atom)
             (list
-             (atom)
-             (list
               (atom)))
+          (list
+            (atom)
             (list
-             (atom)
-             (list
+              (atom)))
+          (list
+            (atom)
+            (list
               (atom)
               (list
-               (atom)
-               (list
                 (atom)
                 (list
-                 (atom)))))
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
                   (atom)
                   (list
-                   (atom)
-                   (list
-                    (atom)))))
-                (list
-                 (atom)
-                 (list
-                  (atom))))
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom)
-                   (list
-                    (atom)))
-                  (list
-                   (atom)
-                   (list
-                    (atom)))
-                  (list
-                   (atom)
-                   (list
                     (atom)
                     (list
-                     (atom)
-                     (list
-                      (atom)))
+                      (atom)
+                      (list
+                        (atom)))))
+                (list
+                  (atom)
+                  (list
+                    (atom))))
+              (list
+                (atom)
+                (list
+                  (atom)
+                  (list
+                    (atom)
                     (list
-                     (atom)
-                     (list
                       (atom)
                       (list
-                       (atom)
-                       (list
-                        (atom)
-                        (list
-                         (atom)))))
-                     (list
+                        (atom)))
+                    (list
                       (atom)
                       (list
-                       (atom)
-                       (list
+                        (atom)))
+                    (list
+                      (atom)
+                      (list
                         (atom)
                         (list
-                         (atom)
-                         (list
                           (atom)
                           (list
-                           (atom)
-                           (list
-                            (atom)))))
+                            (atom)))
                         (list
-                         (atom)
-                         (list
-                          (atom))))
-                       (list
-                        (atom)
-                        (list
-                         (atom)
-                         (list
                           (atom)
                           (list
-                           (atom)
-                           (list
-                            (atom)))
-                          (list
-                           (atom)
-                           (list
-                            (atom)))
-                          (list
-                           (atom)
-                           (list
                             (atom)
                             (list
-                             (atom)
-                             (list
-                              (atom)))
+                              (atom)
+                              (list
+                                (atom)
+                                (list
+                                  (atom)))))
+                          (list
+                            (atom)
                             (list
-                             (atom)
-                             (list
                               (atom)
                               (list
-                               (atom)
-                               (list
                                 (atom)
                                 (list
-                                 (atom)))))
-                             (list
-                              (atom)
-                              (list
-                               (atom)
-                               (list
-                                (atom)
-                                (list
-                                 (atom)
-                                 (list
                                   (atom)
                                   (list
-                                   (atom)
-                                   (list
                                     (atom)
                                     (list
-                                     (atom)
-                                     (list
-                                      (atom)))))
-                                  (list
-                                   (atom)
-                                   (list
-                                    (atom))))
-                                 (list
-                                  (atom)
-                                  (list
-                                   (atom)))
-                                 (list
-                                  (atom)
-                                  (list
-                                   (atom)
-                                   (list
-                                    (atom)
-                                    (list
-                                     (atom)
-                                     (list
                                       (atom)
                                       (list
-                                       (atom)
-                                       (list
                                         (atom)))))
-                                    (list
-                                     (atom)
-                                     (list
-                                      (atom))))
-                                   (list
-                                    (atom)
-                                    (list
-                                     (atom)
-                                     (list
-                                      (atom)
-                                      (list
-                                       (atom)
-                                       (list
-                                        (atom)
-                                        (list
-                                         (atom)
-                                         (list
-                                          (atom)))))
-                                      (list
-                                       (atom)
-                                       (list
-                                        (atom))))
-                                     (list
-                                      (atom)
-                                      (list
-                                       (atom)))
-                                     (list
-                                      (atom)
-                                      (list
-                                       (atom)))))
-                                   (list
-                                    (atom)
-                                    (list
-                                     (atom)))))))
-                               (list
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom))))
+                              (list
                                 (atom)
                                 (list
-                                 (atom)
-                                 (list
                                   (atom)
                                   (list
-                                   (atom)
-                                   (list
-                                    (atom)))))
-                                (list
-                                 (atom)
-                                 (list
-                                  (atom)
-                                  (list
-                                   (atom)
-                                   (list
                                     (atom)
                                     (list
-                                     (atom)
-                                     (list
                                       (atom)
                                       (list
-                                       (atom)))))
-                                   (list
-                                    (atom)
+                                        (atom)))
                                     (list
-                                     (atom)
-                                     (list
                                       (atom)
                                       (list
-                                       (atom)
-                                       (list
-                                        (atom)
-                                        (list
-                                         (atom)
-                                         (list
-                                          (atom)))))
-                                      (list
-                                       (atom)
-                                       (list
-                                        (atom))))
-                                     (list
+                                        (atom)))
+                                    (list
                                       (atom)
                                       (list
-                                       (atom)
-                                       (list
                                         (atom)
                                         (list
-                                         (atom)
-                                         (list
                                           (atom)
                                           (list
-                                           (atom)
-                                           (list
-                                            (atom)))))
+                                            (atom)))
                                         (list
-                                         (atom)
-                                         (list
-                                          (atom))))
-                                       (list
-                                        (atom)
+                                          (atom)
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)))))
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)))))
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom))))
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)))
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)))
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)))
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)
+                                                              (list
+                                                                (atom)
+                                                                (list
+                                                                  (atom)))))
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)
+                                                              (list
+                                                                (atom)
+                                                                (list
+                                                                  (atom)
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom)
+                                                                        (list
+                                                                          (atom)
+                                                                          (list
+                                                                            (atom)))))
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom))))
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)))
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom)
+                                                                        (list
+                                                                          (atom)
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)
+                                                                              (list
+                                                                                (atom)))))
+                                                                        (list
+                                                                          (atom)
+                                                                          (list
+                                                                            (atom))))
+                                                                      (list
+                                                                        (atom)
+                                                                        (list
+                                                                          (atom)
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)
+                                                                              (list
+                                                                                (atom)
+                                                                                (list
+                                                                                  (atom)
+                                                                                  (list
+                                                                                    (atom)))))
+                                                                            (list
+                                                                              (atom)
+                                                                              (list
+                                                                                (atom))))
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)))
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)))))
+                                                                      (list
+                                                                        (atom)
+                                                                        (list
+                                                                          (atom)))))))
+                                                              (list
+                                                                (atom)
+                                                                (list
+                                                                  (atom)
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom)))))
+                                                                (list
+                                                                  (atom)
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom)
+                                                                        (list
+                                                                          (atom)
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)))))
+                                                                      (list
+                                                                        (atom)
+                                                                        (list
+                                                                          (atom)
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)
+                                                                              (list
+                                                                                (atom)
+                                                                                (list
+                                                                                  (atom)
+                                                                                  (list
+                                                                                    (atom)))))
+                                                                            (list
+                                                                              (atom)
+                                                                              (list
+                                                                                (atom))))
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)
+                                                                              (list
+                                                                                (atom)
+                                                                                (list
+                                                                                  (atom)
+                                                                                  (list
+                                                                                    (atom)
+                                                                                    (list
+                                                                                      (atom)
+                                                                                      (list
+                                                                                        (atom)))))
+                                                                                (list
+                                                                                  (atom)
+                                                                                  (list
+                                                                                    (atom))))
+                                                                              (list
+                                                                                (atom)
+                                                                                (list
+                                                                                  (atom)))
+                                                                              (list
+                                                                                (atom)
+                                                                                (list
+                                                                                  (atom)))))
+                                                                          (list
+                                                                            (atom)
+                                                                            (list
+                                                                              (atom)))))))))
+                                                              (list
+                                                                (atom)
+                                                                (list
+                                                                  (atom)
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom)))))
+                                                                (list
+                                                                  (atom)
+                                                                  (list
+                                                                    (atom)
+                                                                    (list
+                                                                      (atom)
+                                                                      (list
+                                                                        (atom)))))))))
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)))
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)))))))))
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)))))
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom))))))
                                         (list
-                                         (atom)))
-                                       (list
-                                        (atom)
-                                        (list
-                                         (atom)))))
-                                     (list
+                                          (atom)
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)))
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)))))))))
+                              (list
+                                (atom)
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom)
+                                    (list
+                                      (atom)))))
+                              (list
+                                (atom)
+                                (list
+                                  (atom))))))
+                        (list
+                          (atom)
+                          (list
+                            (atom)
+                            (list
+                              (atom)))
+                          (list
+                            (atom)
+                            (list
+                              (atom)))))))))
+              (list
+                (atom)
+                (list
+                  (atom)
+                  (list
+                    (atom)
+                    (list
+                      (atom)))))
+              (list
+                (atom)
+                (list
+                  (atom))))))))
+    (list
+      (atom)
+      (list
+        (atom)
+        (list
+          (atom)
+          (list
+            (atom)))
+        (list
+          (atom)
+          (list
+            (atom)
+            (list
+              (atom)))
+          (list
+            (atom)
+            (list
+              (atom)))
+          (list
+            (atom)
+            (list
+              (atom)
+              (list
+                (atom)
+                (list
+                  (atom)
+                  (list
+                    (atom)
+                    (list
+                      (atom)
+                      (list
+                        (atom)))))
+                (list
+                  (atom)
+                  (list
+                    (atom))))
+              (list
+                (atom)
+                (list
+                  (atom)
+                  (list
+                    (atom)
+                    (list
+                      (atom)
+                      (list
+                        (atom)))
+                    (list
+                      (atom)
+                      (list
+                        (atom)))
+                    (list
+                      (atom)
+                      (list
+                        (atom)
+                        (list
+                          (atom)
+                          (list
+                            (atom)))
+                        (list
+                          (atom)
+                          (list
+                            (atom)
+                            (list
+                              (atom)
+                              (list
+                                (atom)
+                                (list
+                                  (atom)))))
+                          (list
+                            (atom)
+                            (list
+                              (atom)
+                              (list
+                                (atom)
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom)
+                                    (list
                                       (atom)
                                       (list
-                                       (atom)))))))))
-                               (list
+                                        (atom)))))
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom))))
+                              (list
                                 (atom)
                                 (list
-                                 (atom)
-                                 (list
                                   (atom)
                                   (list
-                                   (atom)
-                                   (list
-                                    (atom)))))
+                                    (atom)
+                                    (list
+                                      (atom)
+                                      (list
+                                        (atom)))
+                                    (list
+                                      (atom)
+                                      (list
+                                        (atom)))
+                                    (list
+                                      (atom)
+                                      (list
+                                        (atom)
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom)))
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)))))
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)))))
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom))))
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)))
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)
+                                                              (list
+                                                                (atom)))))
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom))))
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)))
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)))))))
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)))))
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)))))
+                                                      (list
+                                                        (atom)
+                                                        (list
+                                                          (atom)
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)
+                                                              (list
+                                                                (atom)
+                                                                (list
+                                                                  (atom)
+                                                                  (list
+                                                                    (atom)))))
+                                                            (list
+                                                              (atom)
+                                                              (list
+                                                                (atom))))
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)))
+                                                          (list
+                                                            (atom)
+                                                            (list
+                                                              (atom)))))))))
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)))))
+                                                (list
+                                                  (atom)
+                                                  (list
+                                                    (atom)
+                                                    (list
+                                                      (atom)
+                                                      (list
+                                                        (atom)))))))))
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)))
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)))))))))
+                              (list
+                                (atom)
                                 (list
-                                 (atom)
-                                 (list
                                   (atom)
                                   (list
-                                   (atom)
-                                   (list
-                                    (atom)))))))))
-                            (list
-                             (atom)
-                             (list
-                              (atom)
+                                    (atom)
+                                    (list
+                                      (atom)))))
                               (list
-                               (atom)))
-                             (list
-                              (atom)
-                              (list
-                               (atom)))))))))
-                       (list
-                        (atom)
+                                (atom)
+                                (list
+                                  (atom))))))
                         (list
-                         (atom)
-                         (list
                           (atom)
                           (list
-                           (atom)))))
-                       (list
-                        (atom)
-                        (list
-                         (atom))))))
-                    (list
-                     (atom)
-                     (list
-                      (atom)
-                      (list
-                       (atom)))
-                     (list
-                      (atom)
-                      (list
-                       (atom)))))))))
-               (list
+                            (atom)
+                            (list
+                              (atom)))
+                          (list
+                            (atom)
+                            (list
+                              (atom)))))))))
+              (list
                 (atom)
                 (list
-                 (atom)
-                 (list
                   (atom)
                   (list
-                   (atom)))))
-               (list
-                (atom)
-                (list
-                 (atom))))))
-            (list
-             (atom)
-             (list
-              (atom)
-              (list
-               (atom)))
-             (list
-              (atom)
-              (list
-               (atom)))))))))
-       (list
-        (atom)
-        (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)))))
-       (list
-        (atom)
-        (list
-         (atom))))))))
-  (list
-   (atom)
-   (list
-    (atom)
-    (list
-     (atom)
-     (list
-      (atom)))
-    (list
-     (atom)
-     (list
-      (atom)
-      (list
-       (atom)))
-     (list
-      (atom)
-      (list
-       (atom)))
-     (list
-      (atom)
-      (list
-       (atom)
-       (list
-        (atom)
-        (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)
-           (list
-            (atom)))))
-        (list
-         (atom)
-         (list
-          (atom))))
-       (list
-        (atom)
-        (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)
-           (list
-            (atom)))
-          (list
-           (atom)
-           (list
-            (atom)))
-          (list
-           (atom)
-           (list
-            (atom)
-            (list
-             (atom)
-             (list
-              (atom)))
-            (list
-             (atom)
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom)
-                (list
-                 (atom)))))
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom)
-                   (list
-                    (atom)))))
-                (list
-                 (atom)
-                 (list
-                  (atom))))
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom)
-                   (list
-                    (atom)))
-                  (list
-                   (atom)
-                   (list
-                    (atom)))
-                  (list
-                   (atom)
-                   (list
                     (atom)
                     (list
-                     (atom)
-                     (list
-                      (atom)))
+                      (atom)))))
+              (list
+                (atom)
+                (list
+                  (atom))))))))
+    (list
+      (atom)
+      (list
+        (atom)
+        (list
+          (atom)
+          (list
+            (atom)))
+        (list
+          (atom)
+          (list
+            (atom)
+            (list
+              (atom)
+              (list
+                (atom)
+                (list
+                  (atom)
+                  (list
+                    (atom)
                     (list
-                     (atom)
-                     (list
                       (atom)
                       (list
-                       (atom)
-                       (list
                         (atom)
                         (list
-                         (atom)))))
-                     (list
+                          (atom)
+                          (list
+                            (atom)
+                            (list
+                              (atom))))))
+                    (list
                       (atom)
                       (list
-                       (atom)
-                       (list
                         (atom)
                         (list
-                         (atom)
-                         (list
-                          (atom)
-                          (list
-                           (atom)
-                           (list
-                            (atom)
-                            (list
-                             (atom)
-                             (list
-                              (atom)))))
-                          (list
-                           (atom)
-                           (list
-                            (atom))))
-                         (list
-                          (atom)
-                          (list
-                           (atom)))
-                         (list
-                          (atom)
-                          (list
-                           (atom)
-                           (list
-                            (atom)
-                            (list
-                             (atom)
-                             (list
-                              (atom)
-                              (list
-                               (atom)
-                               (list
-                                (atom)))))
-                            (list
-                             (atom)
-                             (list
-                              (atom))))
-                           (list
-                            (atom)
-                            (list
-                             (atom)))
-                           (list
-                            (atom)
-                            (list
-                             (atom)))))))
-                       (list
+                          (atom))))
+                    (list
+                      (atom)
+                      (list
                         (atom)
                         (list
-                         (atom)
-                         (list
                           (atom)
                           (list
-                           (atom)
-                           (list
-                            (atom)))))
-                        (list
-                         (atom)
-                         (list
-                          (atom)
-                          (list
-                           (atom)
-                           (list
                             (atom)
                             (list
-                             (atom)
-                             (list
                               (atom)
                               (list
-                               (atom)))))
-                           (list
-                            (atom)
-                            (list
-                             (atom)
-                             (list
-                              (atom)
-                              (list
-                               (atom)
-                               (list
-                                (atom)
-                                (list
-                                 (atom)
-                                 (list
-                                  (atom)))))
-                              (list
-                               (atom)
-                               (list
                                 (atom))))
-                             (list
+                          (list
+                            (atom)
+                            (list
                               (atom)
                               (list
-                               (atom)))
-                             (list
+                                (atom)
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom)
+                                    (list
+                                      (atom))))
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom)
+                                    (list
+                                      (atom)
+                                      (list
+                                        (atom)
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom))))
+                                      (list
+                                        (atom)
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom)))))))))))))))
+                (list
+                  (atom)
+                  (list
+                    (atom)
+                    (list
+                      (atom)
+                      (list
+                        (atom)
+                        (list
+                          (atom)
+                          (list
+                            (atom)
+                            (list
                               (atom)
                               (list
-                               (atom)))))))))
-                       (list
+                                (atom)
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom))))))
+                          (list
+                            (atom)
+                            (list
+                              (atom)
+                              (list
+                                (atom))))
+                          (list
+                            (atom)
+                            (list
+                              (atom)
+                              (list
+                                (atom)
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom)
+                                    (list
+                                      (atom))))
+                                (list
+                                  (atom)
+                                  (list
+                                    (atom)
+                                    (list
+                                      (atom)
+                                      (list
+                                        (atom)
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom))))
+                                      (list
+                                        (atom)
+                                        (list
+                                          (atom)
+                                          (list
+                                            (atom)
+                                            (list
+                                              (atom)
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom))))
+                                            (list
+                                              (atom)
+                                              (list
+                                                (atom)
+                                                (list
+                                                  (atom)))))))))))))))
+                      (list
                         (atom)
                         (list
-                         (atom)
-                         (list
                           (atom)
                           (list
-                           (atom)
-                           (list
-                            (atom)))))
-                        (list
-                         (atom)
-                         (list
-                          (atom)
-                          (list
-                           (atom)
-                           (list
-                            (atom)))))))))
-                    (list
-                     (atom)
-                     (list
-                      (atom)
-                      (list
-                       (atom)))
-                     (list
-                      (atom)
-                      (list
-                       (atom)))))))))
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom)))))
-               (list
-                (atom)
-                (list
-                 (atom))))))
-            (list
-             (atom)
-             (list
-              (atom)
-              (list
-               (atom)))
-             (list
-              (atom)
-              (list
-               (atom)))))))))
-       (list
-        (atom)
-        (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)))))
-       (list
-        (atom)
-        (list
-         (atom))))))))
-  (list
-   (atom)
-   (list
-    (atom)
-    (list
-     (atom)
-     (list
-      (atom)))
-    (list
-     (atom)
-     (list
-      (atom)
-      (list
-       (atom)
-       (list
-        (atom)
-        (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)
-           (list
-            (atom)
-            (list
-             (atom)
-             (list
-              (atom)
-              (list
-               (atom))))))
-          (list
-           (atom)
-           (list
-            (atom)
-            (list
-             (atom))))
-          (list
-           (atom)
-           (list
-            (atom)
-            (list
-             (atom)
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom))))
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom))))
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom)
-                   (list
-                    (atom)
-                    (list
-                     (atom)
-                     (list
-                      (atom))))
-                   (list
-                    (atom)
-                    (list
-                     (atom)
-                     (list
-                      (atom)))))))))))))))
-        (list
-         (atom)
-         (list
-          (atom)
-          (list
-           (atom)
-           (list
-            (atom)
-            (list
-             (atom)
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom))))))
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom))))
-             (list
-              (atom)
-              (list
-               (atom)
-               (list
-                (atom)
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom))))
-                (list
-                 (atom)
-                 (list
-                  (atom)
-                  (list
-                   (atom)
-                   (list
-                    (atom)
-                    (list
-                     (atom)
-                     (list
-                      (atom))))
-                   (list
-                    (atom)
-                    (list
-                     (atom)
-                     (list
-                      (atom)
-                      (list
-                       (atom)
-                       (list
-                        (atom)
-                        (list
-                         (atom))))
-                      (list
-                       (atom)
-                       (list
-                        (atom)
-                        (list
-                         (atom)))))))))))))))
-           (list
-            (atom)
-            (list
-             (atom)
-             (list
-              (atom)))))))))))))))
+                            (atom)))))))))))))))
