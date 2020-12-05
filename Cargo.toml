@@ -4,6 +4,10 @@ version = "0.1.0"
 authors = ["Leandro Ostera <leandro@ostera.io>"]
 edition = "2018"
 
+[lib]
+name = "tree_sitter_sexp"
+crate-type = ["lib", "staticlib", "cdylib"]
+
 [dependencies]
 tree-sitter = "0.17"
 anyhow = "*"
